@@ -7,7 +7,7 @@ const geocode = require('./utils/geocode')
 
 const app = express()
 
-const PORT = process.env.PORT
+const PORT = process.env.PORT || 3000
 
 //Define paths for Express config
 const staticFolder = path.join(__dirname, '../public') 
@@ -158,6 +158,6 @@ app.get('/help',(req,res)=>{
 
 app.listen(PORT,()=>{
 
-    console.log('Server is up on port:', PORT)
+    console.log('Server is up on port: ', PORT)
 
 })
